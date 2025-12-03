@@ -1,1 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Placement Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Placement Cell Portal</h1>
+    <p class="subtitle">Add, remove, and manage job posts (client-only demo)</p>
+  </header>
 
+  <main class="container">
+    <section class="panel form-panel">
+      <h2>Add a job</h2>
+      <form id="job-form">
+        <div class="form-row">
+          <label for="title">Job Title</label>
+          <input id="title" name="title" required />
+        </div>
+        <div class="form-row">
+          <label for="company">Company</label>
+          <input id="company" name="company" required />
+        </div>
+        <div class="form-row">
+          <label for="location">Location</label>
+          <input id="location" name="location" />
+        </div>
+        <div class="form-row">
+          <label for="expiry">Expiry date</label>
+          <input id="expiry" name="expiry" type="date" />
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="add-btn">Add Job</button>
+          <button type="button" id="clear-btn" class="muted">Clear Sample Jobs</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel jobs-panel">
+      <h2>Available Jobs</h2>
+      <div id="jobs-count" class="meta"></div>
+      <ul id="jobs-list" class="jobs-list"></ul>
+      <div id="no-jobs" class="no-jobs">No jobs available. Add one using the form.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Client-side demo • Data saved in your browser (localStorage)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
